@@ -78,6 +78,26 @@ public class MobileStore {
 
     //Iterate the List created in the above method and retrieve the bandName
     //Return the List with specific Mobile having brandName coming from method parameter
+    public List<Mobile> findPhoneByBrand(String brandName)
+    {
+        List<Mobile> mobilesByBrand = new ArrayList<>();
+        Iterator<Mobile> iterator = allMobiles.iterator();
+
+        while(iterator.hasNext()){
+         Mobile element =  iterator.next();
+           if(element.getBrandName().equals(brandName)){
+
+               mobilesByBrand.add(element);
+           }
+
+        }
+
+
+        return mobilesByBrand;
+    }
+
+    //Iterate through the List created in the first method
+    //Return the List of Mobile whose cost is more than $500
 
 
 }
