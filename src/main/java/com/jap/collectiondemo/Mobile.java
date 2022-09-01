@@ -72,5 +72,32 @@ public class Mobile {
     //create parameterized constructor
 
 
+    public Mobile() {
+    }
 
+    public Mobile(String brandName, String modelName, double cost, String screenSize, String batteryLife, String storageSpace, int cameraPixels) {
+        this.brandName = brandName;
+        this.modelName = modelName;
+        this.cost = cost;
+        this.screenSize = screenSize;
+        this.batteryLife = batteryLife;
+        this.storageSpace = storageSpace;
+        this.cameraPixels = cameraPixels;
+    }
+
+
+    //override toString() method
+
+    @Override
+    public String toString() {
+        return "Mobile{" +
+                "brandName='" + brandName + '\'' +
+                ", modelName='" + modelName + '\'' +
+                ", cost=" + cost +
+                ", screenSize='" + screenSize + '\'' +
+                ", batteryLife='" + batteryLife + '\'' +
+                ", storageSpace='" + storageSpace + '\'' +
+                ", cameraPixels=" + cameraPixels +
+                '}';
+    }
 }
