@@ -115,7 +115,19 @@ public class MobileStore {
 
     //Iterate through the List created in the first method
     //Return the List of Mobile whose Pixel is more than 12MP
+    public List<Mobile> findPhonePixelMoreThan12MP()
+    {
+        List<Mobile> mobilesMoreThan12MP = new ArrayList<>();
+        Iterator<Mobile> iterator = allMobiles.iterator();
+        while (iterator.hasNext()){
+            Mobile element = iterator.next();
+            if(element.getCameraPixels() > 12){
+                mobilesMoreThan12MP.add(element);
+            }
+        }
 
+        return mobilesMoreThan12MP;
+    }
 
 
 }
