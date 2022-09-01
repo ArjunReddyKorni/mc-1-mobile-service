@@ -98,6 +98,24 @@ public class MobileStore {
 
     //Iterate through the List created in the first method
     //Return the List of Mobile whose cost is more than $500
+    public List<Mobile> findPhoneCostMoreThan$500()
+    {
+        List<Mobile> mobilesMoreThan500 = new ArrayList<>();
+        Iterator<Mobile> iterator = allMobiles.iterator();
+
+        while (iterator.hasNext()){
+           Mobile element = iterator.next();
+           if(element.getCost() > 500){
+               mobilesMoreThan500.add(element);
+           }
+        }
+
+        return mobilesMoreThan500;
+    }
+
+    //Iterate through the List created in the first method
+    //Return the List of Mobile whose Pixel is more than 12MP
+
 
 
 }
